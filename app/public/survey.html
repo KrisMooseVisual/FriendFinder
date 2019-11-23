@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <title>F.F. Survey Page</title>
 
   <!-- Latest compiled and minified CSS & JS -->
@@ -10,6 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 
 </head>
 
@@ -358,41 +361,25 @@
 <!--SENDING FORM DATA TO SERVER-->
 <script type="text/javascript">
 
+  //CALL TO GET FROM SERVER
+  function runFriendsQuery() {
+    var currentURL = window.location.origin;
 
+    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
 
-  $(".submit").on("click", function (event) {
-    event.preventDefault();
+      .done(function (friendsArray) {
+        console.log("URL: " + currentURL + "/api/friends");
+        console.log(friendsArray);
 
-    var newFriend = {
-      friendName: $("#reserve-name").val().trim(),
-      photo: $("#reserve-picture").val().trim(),
-      scores: $("#reserve-score").val().trim(),
-      surveyResponse: $("#reserve-response").val().trim()
-    };
-    console.log(newFriend);
-
-
-    $.post("/api/survey", newFriend,
-      function (data) {
-
-        //FRIEND FINDER MATCH!
-        if (data) {
-          alert("Let's see who your BFF is!");
+        for (var i=0; i<friendsArray.length; i++) {
+          console.log(friendsArray[i]);
         }
-        //FRIEND FINDER REJECTION!
-        else {
-          alert("Sorry no matches were found!");
-        }
-
-        //CLEAR AFTER SUBMISSION
-        $("#reserve-name").val("");
-        $("#reserve-photo").val("");
-        $("#reserve-score").val("");
-        $("#reserve-response").val("");
 
       });
 
-  });
+  }
+  runFriendsQuery();
+
 
 
 
