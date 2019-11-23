@@ -12,4 +12,5 @@
 ## 
 
 * Below is a screen shot of the home Friend Finder page.
-![Friend Finder](https://github.com/KrisMooseVisual/FriendFinder/tree/master/app/data/images/friend_finder_survey.png)
+
+![Friend Finder](https://github.com/KrisMooseVisual/FriendFinder/tree/master/app/data/images/friendfinder.png)
