@@ -19,112 +19,381 @@
 
     <div class="jumbotron">
       <h1 class="text-center">
-        <span class="fa fa-fire"></span> Take The Friend Finder </h1>
+        FRIEND <i class="fa fa-users"></i> FINDER</h1>
       <hr>
-      <h2 class="text-center">Take The Friend Match Survey! Click Below</h2>
+      <h2 class="text-center">Take The Survey Below And See Who Your BFF Is!</h2>
       <br>
+    </div>
+    <!-- SURVEY SECTION-->
+    <center>
+      <div class="container">
+        <h3><strong>Getting To Know You</strong></h3>
+        <hr>
+
+        <h4>What's Your Name? (required)</h4>
+        <input type="text" id="name" class="form-control" required="">
+
+        <h4>Please Give A Link to Your Photo (required)</h4>
+        <input type="text" id="photo" class="form-control" required="">
+
+        <hr>
+
+        <h3><strong>Question #1</strong></h3>
+        <h4>How do you feel about mainstream music?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Dislike)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (LOVE!)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+        <h3><strong>Question #2</strong></h3>
+        <h4>Do you love living in or close to a major city?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Dislike)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (LOVE!)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+
+        <h3><strong>Question #3</strong></h3>
+        <h4>Cheesesteaks are better than hoagies?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+
+        <h3><strong>Question #4</strong></h3>
+        <h4>Tony Stark (Iron Man) is smarter than Bruce Wayne (Batman)</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+
+        <h3><strong>Question #5</strong></h3>
+        <h4>How much do you enjoy beer?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Hate It!)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Love It!)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+
+        <h3><strong>Question #6</strong></h3>
+        <h4>How much do you enjoy wine?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Hate It!)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Love It!)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+
+        <h3><strong>Question #7</strong></h3>
+        <h4>The summer time is the best time of the year!</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Hate It!)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Love It!)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+        <h3><strong>Question #8</strong></h3>
+        <h4>Skateboarding is better than inline skating.</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Stronly Agree)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+        <h3><strong>Question #9</strong></h3>
+        <h4>Isn't Philadelphia the best city in America?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+        <h3><strong>Question #10</strong></h3>
+        <h4>Don't you just love taking surveys?</h4>
+        <select class="chosen-select" id="q1" style="display: none;">
+          <option value=""></option>
+          <option value="1">1 (I hate it!)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (I love it!)</option>
+        </select>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Scale of 1 - 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">1</button>
+            <button class="dropdown-item" type="button">2</button>
+            <button class="dropdown-item" type="button">3</button>
+            <button class="dropdown-item" type="button">4</button>
+            <button class="dropdown-item" type="button">5</button>
+          </div>
+        </div>
+        <hr>
+
+        <br>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#"
+          id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+          Submit</button>
+
+        <hr>
+
+      </div>
+    </center>
+    <!--END SURVEY-->
+  </div>
+
+  <br>
+
+  <footer class="footer">
+    <div class="container">
       <div class="text-center">
-        <a href="/survey">
+        <h4>Back To The Home Page</h4>
+        <a href="/home">
           <button class="btn btn-lg btn-primary">
-            <span class="fa fa-list-alt"></span> Take The Survey</button>
-        </a>
-        <a href="/">
-          <button class="btn btn-lg btn-default">
             <span class="fa fa-home"></span>
           </button>
         </a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <!-- Reservation Page -->
-        <div class="card">
-          <div class="card-header">
-            Table Reservation
-          </div>
-          <div class="card-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="reserve-name">
-              </div>
-              <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="reserve-phone">
-              </div>
-              <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="reserve-email">
-              </div>
-              <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="reserve-unique-id">
-              </div>
-              <button type="submit" class="btn btn-primary submit">Survey Submit</button>
-            </form>
-          </div>
+
+    <br>
+    <p class="text-center">
+      <a href="/api/friends">API Friends List</a> ||
+      <a href="https://github.com/KrisMooseVisual/FriendFinder">GitHub Repo</a>
+    </p>
+  </footer>
+  <br>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
-
-
-    <footer class="footer">
-      <div class="container">
-        <p>
-          <a href="/api/survey">API Table Link</a> |
-          <a href="/api/waitlist">API Wait List</a>
-      </div>
-    </footer>
-
   </div>
 
 </body>
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<!--SENDING FORM DATA TO SERVER-->
 <script type="text/javascript">
- 
-  $(".submit").on("click", function(event) {
+
+
+
+  $(".submit").on("click", function (event) {
     event.preventDefault();
 
-    // Here we grab the form elements
     var newFriend = {
       friendName: $("#reserve-name").val().trim(),
       photo: $("#reserve-picture").val().trim(),
+      scores: $("#reserve-score").val().trim(),
       surveyResponse: $("#reserve-response").val().trim()
     };
-
     console.log(newFriend);
 
-    // This line is the magic. It"s very similar to the standard ajax function we used.
-    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-    // depending on if a survey is available or not.
 
     $.post("/api/survey", newFriend,
-      function(data) {
+      function (data) {
 
-        // If a table is available... tell user they are booked.
+        //FRIEND FINDER MATCH!
         if (data) {
-          alert("Yay! You are officially booked!");
+          alert("Let's see who your BFF is!");
         }
-
-        // If a table is available... tell user they on the waiting list.
+        //FRIEND FINDER REJECTION!
         else {
-          alert("Sorry you are on the wait list");
+          alert("Sorry no matches were found!");
         }
 
-        // Clear the form when submitting
+        //CLEAR AFTER SUBMISSION
         $("#reserve-name").val("");
-        $("#reserve-phone").val("");
-        $("#reserve-email").val("");
-        $("#reserve-unique-id").val("");
+        $("#reserve-photo").val("");
+        $("#reserve-score").val("");
+        $("#reserve-response").val("");
 
       });
 
   });
-   
-  
+
+
 
 </script>
