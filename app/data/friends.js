@@ -2,28 +2,64 @@
 
 var friendsArray = [
     {
-        friendName: "Prince Nelson",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        scores: [6, 3, 7, 9, 2, 1, 9, 3, 6, 5],
-        surveyResponse: [2, 3, 6, 6, 2, 5, 2, 8, 4]
+        friendName: "Prince",
+        photo: "https://ibb.co/yyM13R0",
+        scores: [1, 3, 7, 2, 2, 1, 3, 3, 4, 5],
+        
     },
     {
-        friendName: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        scores: [6, 3, 7, 9, 2, 1, 9, 3, 6, 5],
-        surveyResponse: [2, 3, 6, 6, 2]
+        friendName: "Helen",
+        photo: "https://ibb.co/hm37c6n",
+        scores: [3, 3, 6, 6, 2, 1, 4, 3, 3, 5],
+        
     },
     {
-        friendName: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        scores: [6, 3, 7, 9, 2, 1, 9, 3, 6, 5],
-        surveyResponse: [2, 3, 6, 6, 2]
+        friendName: "Harriet",
+        photo: "https://ibb.co/37pbB22",
+        scores: [4, 4, 4, 2, 5, 5, 3, 2, 4],
+        
     },
     {
-        friendName: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        scores: [6, 3, 7, 9, 2, 1, 9, 3, 6, 5],
-        surveyResponse: [2, 3, 6, 6, 2]
+        friendName: "Beaker",
+        photo: "https://ibb.co/jkwj5jh",
+        scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        
+    },
+    {
+        friendName: "Thor",
+        photo: "https://ibb.co/dKjnK1D",
+        scores: [3, 3, 5, 1, 1, 2, 2, 5, 4, 2],
+        
+    },
+    {
+        friendName: "James",
+        photo: "https://ibb.co/Tq25CNT",
+        scores: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+        
+    },
+    {
+        friendName: "Janelle",
+        photo: "https://ibb.co/wZncp6H",
+        scores: [1, 2, 3, 4, 5, 5, 4, 3, 2, 1],
+        
+    },
+    {
+        friendName: "Eddie",
+        photo: "https://ibb.co/MC2KpGT",
+        scores: [2, 4, 1, 3, 5, 5, 3, 1, 2, 1],
+        
+    },
+    {
+        friendName: "Tina",
+        photo: "https://ibb.co/BKGgBjt",
+        scores: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+        
+    },
+    {
+        friendName: "Jimmy",
+        photo: "https://ibb.co/hsbdTmR",
+        scores: [3, 4, 4, 4, 4, 4, 4, 4, 1, 4],
+        
     },
 ];
 

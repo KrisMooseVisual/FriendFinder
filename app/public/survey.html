@@ -332,23 +332,24 @@
     </p>
   </footer>
   <br>
-  </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+  <!--MODAL FEATURE FOR PHOTOS FROM FRIENDS ARRAY-->
+  <div class="modal fade" id="friendsPhoto" tabindex="-1" role="dialog" aria-labelledby="Friend Finder"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="friendMatch">YOUR FRIEND FINDER MATCH!</h5>
+          <img id="photo" class="materialboxed" width="500" src="">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
-        </div>
+
+        
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Let's Try Again!</button>
         </div>
       </div>
     </div>
@@ -363,22 +364,88 @@
 
   //CALL TO GET FROM SERVER
   function runFriendsQuery() {
-    var currentURL = window.location.origin;
+    
+    //RUNNING AJAX TO 'GET' DATA
+    $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendName) {
 
-    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+        console.log(friendName);
+        console.log("------------------------------------");
 
-      .done(function (friendsArray) {
-        console.log("URL: " + currentURL + "/api/friends");
-        console.log(friendsArray);
+        // LOOP THROUGH FRIENDS DATA
+        for (var i = 0; i < friendName.length; i++) {
 
-        for (var i=0; i<friendsArray.length; i++) {
-          console.log(friendsArray[i]);
+          // Get a reference to the tableList element and populate it with tables
+          var tableList = $("#tableList");
+
+          // Then display the fields in the HTML (Section Name, Date, URL)
+          var listItem = $("<li class='list-group-item mt-4'>");
+
+          listItem.append(
+            $("<h2>").text("Table #" + (i + 1)),
+            $("<hr>"),
+            $("<h2>").text("ID: " + tableData[i].customerID),
+            $("<h2>").text("Name: " + tableData[i].customerName),
+            $("<h2>").text("Email: " + tableData[i].customerEmail),
+            $("<h2>").text("Phone: " + tableData[i].phoneNumber)
+          );
+
+          tableList.append(listItem);
         }
-
       });
-
   }
-  runFriendsQuery();
+
+  function runWaitListQuery() {
+
+    //AJAX FOR API TO 'GET' DATA
+    $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(waitData) {
+
+        // Here we then log the waitlistData to console, where it will show up as an object.
+        console.log(waitData);
+        console.log("------------------------------------");
+
+        // Loop through and display each of the customers
+        for (var i = 0; i < waitData.length; i++) {
+
+          // Get a reference to the waitList element and populate it with tables
+          var waitList = $("#waitList");
+
+          // Then display the fields in the HTML (Section Name, Date, URL)
+          var listItem = $("<li class='list-group-item mt-4'>");
+
+          listItem.append(
+            $("<h2>").text("Table #" + (i + 1)),
+            $("<hr>"),
+            $("<h2>").text("ID: " + waitData[i].customerID),
+            $("<h2>").text("Name: " + waitData[i].customerName),
+            $("<h2>").text("Email: " + waitData[i].customerEmail),
+            $("<h2>").text("Phone: " + waitData[i].phoneNumber)
+          );
+
+          waitList.append(listItem);
+        }
+      });
+  }
+
+  // This function resets all of the data in our tables. This is intended to let you restart a demo.
+  function clearTable() {
+    alert("Clearing...");
+
+    // Clear the tables on the server and then empty the elements on the client
+    $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
+      $("#waitList").empty();
+      $("#tableList").empty();
+    });
+  }
+
+  $("#clear").on("click", clearTable);
+
+
+  // Run Queries!
+  // ==========================================
+  runTableQuery();
+  runWaitListQuery();
 
 
 
