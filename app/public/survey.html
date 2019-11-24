@@ -300,7 +300,7 @@
   $("#submitButton").on("click", function (event) {
     event.preventDefault();
     //CAPTURE RESPONSES FROM SURVEY
-    var friendMatch = {
+    var userInfo = {
       name: $("#name").val().trim(),
       photo: $("#photo").val().trim(),
       surveyResponse: [parseInt(
@@ -320,8 +320,8 @@
     console.log(friendMatch.surveyResponse[0]);
     var currentURL = window.location.origin;
     $.post("/api/friends", friendMatch, function (data) {
-      var bffMatch = "";
-        $("#question1").val(),
+      var bffMatchScore = "";
+      $("#question1").val(),
         $("#question2").val(),
         $("#question3").val(),
         $("#question4").val(),
@@ -333,15 +333,35 @@
         $("#question10").val()
     });
 
+    //ADDING INPUT TO FRIENDS LIST
+    $.post('/api/friends', userInfo)
+      .done(function (data) {
 
+        // NAME AND PHOTO OF MATCH
+        $('#userMatch').html(data.bffMatch);
+        $("#userMatchImage").attr("src", data.bffMatchImage);
 
+      });
 
+      //MODAL TEXT AND OPEN TEXT
     $(".modal-body").text(friendMatch);
     $("#modal-body").modal("open");
 
-
-
   });
+
+  runFriendsQuery();
+  function runFriendsQuery() {
+    var currentURL = window.location.origin;
+    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+
+      .then(function (friendsArray) {
+        for (var i = 0; i < friendsArray.length; i++) {
+          console.log(friendsArray[i]);
+          console.log("-------------------");
+        }
+
+      });
+  }
 
 </script>
 
