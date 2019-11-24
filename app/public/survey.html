@@ -222,11 +222,11 @@
               Scale of 1 - 5
             </button>
             <div class="dropdown-menu" aria-labelledby="question10">
-              <button class="dropdown-item" type="button">1</button>
+              <button class="dropdown-item" type="button">1(I hate them!</button>
               <button class="dropdown-item" type="button">2</button>
               <button class="dropdown-item" type="button">3</button>
               <button class="dropdown-item" type="button">4</button>
-              <button class="dropdown-item" type="button">5</button>
+              <button class="dropdown-item" type="button">5(I love them!</button>
             </div>
           </div>
           <hr>
@@ -242,7 +242,7 @@
           </div>
 
           <!--MODAL FOR SUBMIT BUTTON-->
-          <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+          <div class="modal fade" id="submitButton" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -354,9 +354,9 @@
     var currentURL = window.location.origin;
     $.ajax({ url: currentURL + "/api/friends", method: "GET" })
 
-      .then(function (friendsArray) {
-        for (var i = 0; i < friendsArray.length; i++) {
-          console.log(friendsArray[i]);
+      .then(function (friendInfo) {
+        for (var i = 0; i < friendInfo.length; i++) {
+          console.log(friendInfo[i]);
           console.log("-------------------");
         }
 
