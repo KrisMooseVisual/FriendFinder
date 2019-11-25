@@ -9,8 +9,19 @@
   answers given by other users. You'll be matched up with the
   person who has the score closest to yours!
 
-## 
+## Technologies used
+
+* Javascript
+* node.js
+* Bootstrap
+* HTML
+* Express.js
+* jQuery
 
 * Below is a screen shot of the home Friend Finder page.
 
 ![Friend Finder](https://github.com/KrisMooseVisual/FriendFinder/blob/master/app/data/images/friendfinder.png)
+
+* See video below
+
+![Friend Finder vid](https://www.youtube.com/watch?v=XodjS4II-Fs)
