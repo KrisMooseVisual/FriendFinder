@@ -191,8 +191,8 @@
 
           <!-- SUBMIT BUTTON -->
           <div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target=".bd-example-modal-lg"
-              id="submitButton"><i class="fa fa-check-circle" aria-hidden="true"></i>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
+              data-target=".bd-example-modal-lg" id="submitButton"><i class="fa fa-check-circle" aria-hidden="true"></i>
               Submit</button>
           </div>
 
@@ -255,56 +255,47 @@
   $("#submitButton").on("click", function (event) {
     event.preventDefault();
     //CAPTURE RESPONSES FROM SURVEY
-    var userInfo = {
+    var friendInfo = {
       name: $("#name").val().trim(),
       photo: $("#photo").val().trim(),
-      surveyResponse: [parseInt(
-        $("#question1").val(),
-        $("#question2").val(),
-        $("#question3").val(),
-        $("#question4").val(),
-        $("#question5").val(),
-        $("#question6").val(),
-        $("#question7").val(),
-        $("#question8").val(),
-        $("#question9").val(),
-        $("#question10").val()
-      )
+      surveyResponse: [
+        $("#question1").val().trim(),
+        $("#question2").val().trim(),
+        $("#question3").val().trim(),
+        $("#question4").val().trim(),
+        $("#question5").val().trim(),
+        $("#question6").val().trim(),
+        $("#question7").val().trim(),
+        $("#question8").val().trim(),
+        $("#question9").val().trim(),
+        $("#question10").val().trim()
       ]
     };
-    console.log(userInfo.surveyResponse[0]);
+    $("#friendForm").html("YAAS! Here's your new BFF!");
+
+    console.log(typeof (friendInfo.surveyResponse[0]));
     var currentURL = window.location.origin;
-    $.post("/api/friends", friendMatch, function (data) {
-      var bffMatchScore = "";
-      $("#question1").val(),
-        $("#question2").val(),
-        $("#question3").val(),
-        $("#question4").val(),
-        $("#question5").val(),
-        $("#question6").val(),
-        $("#question7").val(),
-        $("#question8").val(),
-        $("#question9").val(),
-        $("#question10").val()
-    });
+    $.post("/api/friends", friendInfo, function (data) {
 
-    //ADDING INPUT TO FRIENDS LIST
-    $.post('/api/friends', userInfo)
-      .done(function (data) {
+      $("#name").val(""),
+        $("#photo").val(""),
+        $("#question1").val(""),
+        $("#question2").val(""),
+        $("#question3").val(""),
+        $("#question4").val(""),
+        $("#question5").val(""),
+        $("#question6").val(""),
+        $("#question7").val(""),
+        $("#question8").val(""),
+        $("#question9").val(""),
+        $("#question10").val("")
 
-        // NAME AND PHOTO OF MATCH
-        $('#userMatch').html(data.bffMatch);
-        $("#userMatchImage").attr("src", data.bffMatchImage);
+          .done(function (data) {
+            // NAME AND PHOTO OF MATCH
+            $("#name").html(data.friendName);
+            $("#photo").attr("src", data.photo);
+          });
 
-      });
-
-    //MODAL TEXT AND OPEN TEXT
-    $(".modal-body").text(friendMatch);
-    $("#modal-body").modal("open");
-
-    //MATERIAL SELECT INITIALIZATION
-    $(document).ready(function () {
-      $('.mdb-select').materialSelect();
     });
 
   });
@@ -314,10 +305,9 @@
     var currentURL = window.location.origin;
     $.ajax({ url: currentURL + "/api/friends", method: "GET" })
 
-      .then(function (friendInfo) {
-        for (var i = 0; i < friendInfo.length; i++) {
-          console.log(friendInfo[i]);
-          console.log("-------------------");
+      .then(function (surveyResponse) {
+        for (var i = 0; i < surveyResponse.length; i++) {
+          console.log(surveyResponse[i]);
         }
 
       });
